@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Balthild,ibalthild@example.com"><title>微分基本定理的数学意义 · Balthild's Blog</title><meta name="description" content="注：本文说的不是微积分基本定理（牛顿—莱布尼兹公式）。
+在《高等数学》中，有这样一条定理：
+
+微分基本定理： 若函数 $y=f(x)$ 在 $x_0$ 处可微，则有
+$$ \mathrm{d}y = f’ \mathrm{d}x $$
+
+很容易看出，正是因为这个定理，导数 $f’(x)$ 可以写成微"><meta name="keywords"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title><a href="/">Balthild's Blog</a></h3><div class="description"><p>An orange dream.</p></div></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">友链</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="https://cn.gravatar.com/avatar/035ab20219135a946fba7d2fc9fde006?s=80"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>微分基本定理的数学意义</a></h3></div><div class="post-content"><p>注：本文说的<strong>不是</strong><u>微积分基本定理</u>（牛顿—莱布尼兹公式）。</p>
+<p>在《高等数学》中，有这样一条定理：</p>
+<blockquote>
+<p><strong>微分基本定理：</strong> 若函数 $y=f(x)$ 在 $x_0$ 处可微，则有</p>
+<p>$$ \mathrm{d}y = f’ \mathrm{d}x $$</p>
+</blockquote>
+<p>很容易看出，正是因为这个定理，<u>导数</u> $f’(x)$ 可以写成微商的形式 $\frac{\mathrm{d}y}{\mathrm{d}x}$，并且 $\mathrm{d}y$ 和 $\mathrm{d}x$ 可以拆开来到处移。但要冠以<u>微分基本定理</u>的名号，这个理由恐怕不太充分。在学了<u>泰勒级数</u>后，还能发现这个定理在形式上就是泰勒展开式的第一项，但这同样说明不了什么问题。</p>
+<p>事实上，这个定理之所以「基本」，是因为它揭示了微分的本质——<strong>局部线性近似</strong>。</p>
+<hr>
+<p><u>微积分</u>，或者说<u>数学分析</u>，研究的是函数在局域内的性质。存在一类函数，它们有这样的性质：能找到一个足够小的<u>邻域</u>半径，该函数在此邻域具有某个一阶线性函数所具有的一切性质。这类函数就是<u>可微函数</u>，上述线性函数的斜率是它的<u>导数</u>。</p>
+<p>函数的微分性质都在<u>邻域</u>内成立，只要邻域的半径足够小，原函数与其线性近似的差异可以忽略不计（注：如果考虑<u>实数连续统假设</u>，可以认为是没有差异）——这便是微分的<em>本质</em>。唯有理解了这点，<u>分析</u>才成为一个能灵活运用的方法，而不是几页纸都写不下的导数公式，或是一连串积分形式变换的枯燥程序。</p>
+<hr>
+<p>考虑可微二元函数 $f(x,y)$ 的<u>全微分</u> $\mathrm{d}z$ 的表达式：</p>
+<pre class="tex">
+\mathrm{d}z
+= \frac{\partial f}{\partial x} \mathrm{d}x
++ \frac{\partial f}{\partial y} \mathrm{d}y
+</pre>
+
+<p>我们已经知道 $\mathrm{d}z$ 有 $A\cdot\mathrm{d}x + B\cdot\mathrm{d}y$ 的形式，但为什么会有 $A=\frac{\partial f}{\partial x}, B=\frac{\partial f}{\partial y}$ 呢？当然，这可以用导数的定义来证明，但抽象的符号表达无法让人直观地感受到「为什么」。</p>
+<p>如果理解了微分基本定理，上述等式就是显然的了。可微二元函数的图像是光滑曲面，如果把邻域取得足够小，曲面就近似成为平面，准确地说，是该点的切平面。</p>
+<p>若要求从坐标平面上一点 $P:(x_1,y_1)$ 到另一点 $Q:(x_2,y_2)$ 在某平面 $F$ 上竖直投影的「高度」之差，我们会怎么计算呢？可以额外取一点 $S:(x_1,y_2)$，先计算 $P$ 到 $S$ 的高度差，再计算 $S$ 到 $Q$ 的高度差，把它们加起来就是 $P$ 到 $Q$ 的高度差。当然你也可以取 $S’:(x_2,y_1)$，结果是一样的，因为坐标平面上的矩形 $PQRS$ 投影到平面 $F$ 上形成的是平行四边形。</p>
+<p>如果这个平面是曲面的切平面，那么在邻域足够小时，切平面上的「高度差」就是我们想求的 $\mathrm{d}z$，系数 $A,B$ 即分别是沿着 $x, y$ 方向的直线在切平面上投影的<u>斜率</u>。而这两个斜率无疑便是上述的两个偏导数 $\frac{\partial f}{\partial x}$ 和 $\frac{\partial f}{\partial y}$。</p>
+<p>对更多变量的微积分而言，受限于想象三维以上空间的难度，很难借助几何来直观地想象，但其原理是相同的。若学习微分几何，建立了切空间的概念后，便可以类比上去理解。</p>
+<hr>
+<p>上面还提到微分基本定理在形式上与泰勒展开式的第一项相同，那么它们之间是否会有本质的联系呢？很显然是的，因为泰勒级数也是在对函数作线性近似，区别在于微分法是一次线性近似，而泰勒展开是高次线性近似。因此，微分只能在足够小的邻域内近似，而泰勒级数取了高次后，收敛域就大得多了。</p>
+<p>某种意义上说，泰勒展开是微分法的推广。但要注意的是，<strong>不能</strong>说微分基本定理是泰勒级数的特殊情况，因为泰勒级数本身是用微分法推导而得，若用泰勒级数来演绎推理得到微分基本定理，就犯了循环论证的错误。</p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2019-01-12</span><i class="fa fa-tag"></i></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,https://balthild.com/2019/01/12/mathematical-meanings-of-the-fundamental-differential-theorem/,Balthild's Blog,微分基本定理的数学意义,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2018/05/21/what-should-we-think-about-ips-that-free-of-charge-but-not-free-of-freedom/" title="如何看待东方这样的免费但不允许盈利的 IP?">下一篇</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
